@@ -16,5 +16,12 @@ pipeline {
                 echo 'Hello World, this is deploy-1!'
             }
         }
+        stage('run') {
+            steps {
+                echo 'This is pyhton file with trigger!!!'
+                sh 'python --version'
+                sh 'python pipeline.py'
+            }
+        }    
     }
 }
