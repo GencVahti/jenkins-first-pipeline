@@ -23,13 +23,13 @@ pipeline {
                 sh 'python pipeline.py'
             }
         }    
-        stage('build') {
+        stage('build-2') {
             steps {
                 echo 'Compiling the java source code'
                 sh 'javac Hello.java'
             }
         }
-        stage('run') {
+        stage('run-2') {
             steps {
                 echo 'Running the compiled java code.'
                 sh 'java Hello'
